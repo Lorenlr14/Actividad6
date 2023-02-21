@@ -1,0 +1,23 @@
+header.container {
+    border-bottom: 2px solid lightgrey;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.home {
+    color: firebrick;
+}
+
+.home,
+.new_user {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+img {
+    width: 20%;
+}
+
+ul.nav.d-flex {
+    align-items: center;
+}
