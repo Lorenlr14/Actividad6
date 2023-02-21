@@ -1,7 +1,6 @@
 header.container {
     border-bottom: 2px solid lightgrey;
-    margin: 0 auto;
-    padding: 10px;
+    margin: 20px auto;
 }
 
 .home {
@@ -14,7 +13,7 @@ header.container {
     font-size: 1.3rem;
 }
 
-img {
+header.container img {
     width: 20%;
 }
 
