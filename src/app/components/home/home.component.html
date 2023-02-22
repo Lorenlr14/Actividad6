@@ -1,27 +1,33 @@
-<div class="container row-cols-1 row-cols-md-4 g-4">
-    <div class="col">
-        <div class="card">
-            <img src="https://thumbs.dreamstime.com/b/icono-masculino-de-avatar-con-la-barba-en-su-boca-123115272.jpg"
-                class="card-img-top" alt="Foto usuario">
-            <div class="card-body text-center">
-                <h5 class="card-title">Nombre usuario completo</h5>
-            </div>
-            <ul class="d-flex flex-row align-items-center">
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-4 col-xl-3 card text-center" *ngFor="let user of arrUsers">
+            <img [src]="user.image" alt="Logo usuario">
+            <h5>{{user.first_name}} {{user.last_name}}</h5>
+            <ul class="d-flex flex-row justify-content-between align-items-center">
                 <li class="p-2">
-                    <button class="btn"><img
-                            src="https://static.vecteezy.com/system/resources/previews/004/263/227/non_2x/magnifying-glass-silhouette-magnifying-glass-icon-or-clipart-vector.jpg"
-                            alt="Ver detalle">Ver detalle</button>
+                    <div class="row">
+                        <figure>
+                            <img src="https://cdn-icons-png.flaticon.com/128/5008/5008371.png" alt="Ver detalle">
+                            <figcaption>Ver detalle</figcaption>
+                        </figure>
+                    </div>
                 </li>
                 <li class="p-2">
-
-                    <button class="btn"><img
-                            src="https://cdn.icon-icons.com/icons2/1380/PNG/512/emblemsynchronizing_93485.png"
-                            alt="Actualizar">Actualizar</button>
+                    <div class="row">
+                        <figure>
+                            <img src="https://previews.123rf.com/images/imagecatalogue/imagecatalogue1603/imagecatalogue160300826/53969474-actualizar-flechas-icono-del-vector-el-estilo-es-s%C3%ADmbolo-de-icono-plana-de-color-negro-fondo-blanco-.jpg"
+                                alt="Actualizar">
+                            <figcaption>Actualizar</figcaption>
+                        </figure>
+                    </div>
                 </li>
                 <li class="p-2">
-
-                    <button class="btn"><img src="https://cdn-icons-png.flaticon.com/512/3221/3221845.png"
-                            alt="Borrar">Borrar</button>
+                    <div class="row">
+                        <figure>
+                            <img src="https://cdn-icons-png.flaticon.com/512/88/88666.png" alt="Eliminar">
+                            <figcaption>Eliminar</figcaption>
+                        </figure>
+                    </div>
                 </li>
             </ul>
         </div>
