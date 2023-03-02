@@ -8,7 +8,7 @@ import { UserViewComponent } from './components/user/user-view/user-view.compone
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: 'home', component: HomeComponent },
-  { path: 'users/:userid', component: UserViewComponent },
+  { path: 'user/:userid', component: UserViewComponent },
   { path: 'newuser', component: FormComponent },
   { path: 'updateuser/:userid', component: FormComponent },
   { path: '**', component: C404Component }

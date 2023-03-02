@@ -8,10 +8,13 @@ import { User } from '../interfaces/user.interface';
 })
 export class UsersService {
   arrUsers: User[] = [];
-  private initialUrl: string = "https://peticiones.online/api/users/?page=1";
+  private initialUrl: string = "https://peticiones.online/api/users/";
   constructor(private httpClient: HttpClient) { }
 
   getAll(pPage: number = 1): Promise<any> {
     return lastValueFrom(this.httpClient.get<any>(this.initialUrl));
+  }
+  getById(pId: number): Promise<any> {
+    return lastValueFrom(this.httpClient.get<any>(`${this.initialUrl}${pId}`));
   }
 }

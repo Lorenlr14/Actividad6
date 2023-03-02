@@ -1,15 +1,20 @@
-<header class="container">
-  <ul class="nav d-flex mb-3">
-    <li class="nav-item me-auto p-2">
-      <img src="https://www.meme-arsenal.com/memes/b6a18f0ffd345b22cd219ef0e73ea5fe.jpg" alt="Logo">
-    </li>
-    <li class="nav-item p-2">
-      <button class="btn home">Home</button>
-    </li>
-    <li class="nav-item p-2">
-      <button class="btn new_user">Nuevo Usuario</button>
-    </li>
-  </ul>
+<header class="px-3 py-2 text-bg-dark">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <button class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </button>
+      <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+        <li class="nav-item p-2">
+          <button class="btn nav-link text-white" [routerLink]="['/home']">Home</button>
+        </li>
+        <li class="nav-item p-2">
+          <button class="btn nav-link text-white" [routerLink]="['/newuser']">Nuevo Usuario</button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>
-<app-home></app-home>
 <router-outlet></router-outlet>

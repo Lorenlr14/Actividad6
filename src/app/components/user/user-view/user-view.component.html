@@ -1,1 +1,19 @@
-<p>user-view works!</p>
+<section class="container">
+    <div class="card p-3">
+        <div class="d-flex justify-content-around align-items-center">
+            <figure>
+                <img [src]="currentUser.image" [alt]="currentUser.first_name">
+            </figure>
+            <ul class="border-3 border-start">
+                <li>{{currentUser.first_name}}</li>
+                <li>{{currentUser.last_name}}</li>
+                <li>
+                    <p class="fw-bold d-inline">Nombre de usuario:</p> {{currentUser.username}}
+                </li>
+                <li>
+                    <p class="fw-bold d-inline">Email:</p> {{currentUser.email}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
