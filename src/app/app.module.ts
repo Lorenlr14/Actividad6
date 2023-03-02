@@ -8,6 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FormComponent } from './components/form/form.component';
 import { UserComponent } from './components/user/user.component';
 import { C404Component } from './components/c404/c404.component';
+import { UserCardComponent } from './components/home/user-card/user-card.component';
+import { UserViewComponent } from './components/user/user-view/user-view.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { C404Component } from './components/c404/c404.component';
     HomeComponent,
     FormComponent,
     UserComponent,
-    C404Component
+    C404Component,
+    UserCardComponent,
+    UserViewComponent
   ],
   imports: [
     BrowserModule,

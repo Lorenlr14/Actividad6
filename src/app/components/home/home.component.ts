@@ -13,7 +13,12 @@ export class HomeComponent implements OnInit {
 
   }
   async ngOnInit(): Promise<any> {
-    let response = await this.usersService.getAll();
-    this.arrUsers = response.results;
+    try {
+      let response = await this.usersService.getAll();
+      this.arrUsers = response.results;
+    }
+    catch (err) {
+      console.log(err);
+    }
   }
 }

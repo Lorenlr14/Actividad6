@@ -8,7 +8,7 @@ import { User } from '../interfaces/user.interface';
 })
 export class UsersService {
   arrUsers: User[] = [];
-  private initialUrl: string = "https://peticiones.online/api/users/";
+  private initialUrl: string = "https://peticiones.online/api/users/?page=1";
   constructor(private httpClient: HttpClient) { }
 
   getAll(pPage: number = 1): Promise<any> {
