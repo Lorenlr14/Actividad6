@@ -20,7 +20,6 @@ export class UserViewComponent implements OnInit {
     this.activateRoute.params.subscribe(async (params: any) => {
       let currentId: number = params.userid;
       let response: any = await this.usersService.getById(currentId);
-      console.log(response);
       this.currentUser = response;
     })
   }
