@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,7 +10,6 @@ import { FormComponent } from './components/form/form.component';
 import { C404Component } from './components/c404/c404.component';
 import { UserCardComponent } from './components/home/user-card/user-card.component';
 import { UserViewComponent } from './components/user-view/user-view.component';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

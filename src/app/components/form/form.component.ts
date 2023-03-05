@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/interfaces/user.interface';
 import { UsersService } from 'src/app/services/users.service';
@@ -19,11 +19,26 @@ export class FormComponent {
     private activatedRoute: ActivatedRoute
   ) {
     this.userForm = new FormGroup({
-      first_name: new FormControl("", []),
-      last_name: new FormControl("", []),
-      username: new FormControl("", []),
-      email: new FormControl("", []),
-      image: new FormControl("", [])
+      first_name: new FormControl("", [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(150)
+      ]),
+      last_name: new FormControl("", [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(150)
+      ]),
+      username: new FormControl("", [
+        Validators.required
+      ]),
+      email: new FormControl("", [
+        Validators.required,
+        Validators.pattern(/^\S+\@\S+\.[com,es]/)
+      ]),
+      image: new FormControl("", [
+        Validators.required
+      ])
     }, []);
   }
 
@@ -38,11 +53,26 @@ export class FormComponent {
         this.user_name = user.first_name;
         this.userForm = new FormGroup({
           id: new FormControl(id, []),
-          first_name: new FormControl(user?.first_name, []),
-          last_name: new FormControl(user?.last_name, []),
-          username: new FormControl(user?.username, []),
-          email: new FormControl(user?.email, []),
-          image: new FormControl(user?.image, [])
+          first_name: new FormControl(user?.first_name, [
+            Validators.required,
+            Validators.minLength(3),
+            Validators.maxLength(150)
+          ]),
+          last_name: new FormControl(user?.last_name, [
+            Validators.required,
+            Validators.minLength(3),
+            Validators.maxLength(150)
+          ]),
+          username: new FormControl(user?.username, [
+            Validators.required
+          ]),
+          email: new FormControl(user?.email, [
+            Validators.required,
+            Validators.pattern(/^\S+\@\S+\.[com,es]/)
+          ]),
+          image: new FormControl(user?.image, [
+            Validators.required
+          ])
         }, []);
       }
     });

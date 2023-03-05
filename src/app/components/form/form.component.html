@@ -25,6 +25,7 @@
         </div>
     </form>
     <div class="d-flex justify-content-center">
-        <input type="submit" value="Guardar" class="btn btn-secondary my-3">
+        <input type="submit" value="Guardar" class="btn my-3 btn-secondary"
+            [ngClass]="{'btn-secondary': !userForm.valid, 'btn-success': userForm.valid}" [disabled]="!userForm.valid">
     </div>
 </div>
