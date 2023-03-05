@@ -11,6 +11,7 @@
         </button>
         <button class="btn btn-success" [routerLink]="['/updateuser', myUser._id]"><i
                 class="fa-solid fa-arrows-rotate fs-4"></i></button>
-        <button class="btn btn-danger"><i class="fa-regular fa-trash-can fs-4"></i></button>
+        <button class="btn btn-danger" (click)="deleteUser(myUser._id)"><i
+                class="fa-regular fa-trash-can fs-4"></i></button>
     </div>
 </div>

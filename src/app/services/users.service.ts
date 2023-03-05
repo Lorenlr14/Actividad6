@@ -8,22 +8,22 @@ import { User } from '../interfaces/user.interface';
 })
 export class UsersService {
   arrUsers: User[] = [];
-  private initialUrl: string = "https://peticiones.online/api/users/";
+  private initialUrl: string = "https://peticiones.online/api/users";
   constructor(private httpClient: HttpClient) { }
 
   getAll(pPage: number = 1): Promise<any> {
-    return lastValueFrom(this.httpClient.get<any>(this.initialUrl));
+    return lastValueFrom(this.httpClient.get<any>(`${this.initialUrl}?page=${pPage}`));
   }
   getById(pId: number): Promise<any> {
-    return lastValueFrom(this.httpClient.get<any>(`${this.initialUrl}${pId}`));
+    return lastValueFrom(this.httpClient.get<any>(`${this.initialUrl}/${pId}`));
   }
   create(pUser: User): Promise<User> {
     return lastValueFrom(this.httpClient.post<User>(this.initialUrl, pUser));
   }
   update(pUser: User): Promise<User> {
-    return lastValueFrom(this.httpClient.put<User>(`${this.initialUrl}${pUser.id}`, pUser));
+    return lastValueFrom(this.httpClient.put<User>(`${this.initialUrl}/${pUser.id}`, pUser));
   }
-  delete(pId: number): Promise<any> {
-    return lastValueFrom(this.httpClient.delete<any>(`${this.initialUrl}${pId}`));
+  delete(pId: string): Promise<any> {
+    return lastValueFrom(this.httpClient.delete<any>(`${this.initialUrl}/${pId}`));
   }
 }

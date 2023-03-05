@@ -3,5 +3,12 @@
         <article class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let user of arrUsers">
             <app-user-card [myUser]="user"></app-user-card>
         </article>
+        <nav class="d-flex justify-content-center mt-5">
+            <ul class="pagination pagination-lg">
+                <li *ngFor="let pagina of arrPages" class="page-item"><button class="page-link"
+                        [ngClass]="{'active': (currentPage === pagina)}" (click)="gotoPage(pagina)">{{pagina}}</button>
+                </li>
+            </ul>
+        </nav>
     </div>
 </section>
