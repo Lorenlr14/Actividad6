@@ -1,14 +1,10 @@
-<header class="px-3 py-2 text-bg-dark">
+<header class="px-3 py-2 text-bg-dark border-4 border-bottom border-success">
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-      <button class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-          <use xlink:href="#bootstrap"></use>
-        </svg>
-      </button>
-      <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+      <i class="d-flex align-items-center me-lg-auto bg-dark text-white fa-brands fa-square-dribbble fs-1"></i>
+      <ul class="nav col-12 col-lg-auto justify-content-center my-md-0">
         <li class="nav-item p-2">
-          <button class="btn nav-link text-white" [routerLink]="['/home']">Home</button>
+          <button class="btn nav-link text-success" [routerLink]="['/home']">Home</button>
         </li>
         <li class="nav-item p-2">
           <button class="btn nav-link text-white" [routerLink]="['/newuser']">Nuevo Usuario</button>
@@ -18,3 +14,8 @@
   </div>
 </header>
 <router-outlet></router-outlet>
+<footer class="px-3 py-2 text-bg-dark border-4 border-top border-success">
+  <div class="d-flex flex-wrap align-items-center justify-content-center">
+    <p>Actividad 6 &copy; Lorenzo López Rodríguez</p>
+  </div>
+</footer>
