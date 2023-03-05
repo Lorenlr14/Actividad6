@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { C404Component } from './components/c404/c404.component';
 import { FormComponent } from './components/form/form.component';
 import { HomeComponent } from './components/home/home.component';
-import { UserViewComponent } from './components/user/user-view/user-view.component';
+import { UserViewComponent } from './components/user-view/user-view.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },

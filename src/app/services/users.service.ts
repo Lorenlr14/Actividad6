@@ -17,4 +17,13 @@ export class UsersService {
   getById(pId: number): Promise<any> {
     return lastValueFrom(this.httpClient.get<any>(`${this.initialUrl}${pId}`));
   }
+  create(pUser: User): Promise<User> {
+    return lastValueFrom(this.httpClient.post<User>(this.initialUrl, pUser));
+  }
+  update(pUser: User): Promise<User> {
+    return lastValueFrom(this.httpClient.put<User>(`${this.initialUrl}${pUser.id}`, pUser));
+  }
+  delete(pId: number): Promise<any> {
+    return lastValueFrom(this.httpClient.delete<any>(`${this.initialUrl}${pId}`));
+  }
 }

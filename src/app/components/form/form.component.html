@@ -1,1 +1,30 @@
-<p>form works!</p>
+<div class="d-flex justify-content-center">
+    <figure class="text-center mt-5 w-15"><img [src]="user_image" [alt]="user_name"></figure>
+</div>
+<div class="mx-5">
+    <form novalidate [formGroup]="userForm" (ngSubmit)="getDataForm()">
+        <div>
+            <label for="first_name" class="form-label">Nombre:</label>
+            <input type="text" id="first_name" formControlName="first_name" class="form-control">
+        </div>
+        <div>
+            <label for="last_name" class="form-label">Apellido:</label>
+            <input type="text" id="last_name" formControlName="last_name" class="form-control">
+        </div>
+        <div>
+            <label for="username" class="form-label">Nombre de usuario:</label>
+            <input type="text" id="username" formControlName="username" class="form-control">
+        </div>
+        <div>
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" formControlName="email" class="form-control">
+        </div>
+        <div>
+            <label for="image" class="form-label">Imagen:</label>
+            <input type="text" id="image" formControlName="image" class="form-control">
+        </div>
+    </form>
+    <div class="d-flex justify-content-center">
+        <input type="submit" value="Guardar" class="btn btn-secondary my-3">
+    </div>
+</div>

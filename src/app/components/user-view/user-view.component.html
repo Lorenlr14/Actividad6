@@ -4,7 +4,7 @@
             <figure>
                 <img [src]="currentUser.image" [alt]="currentUser.first_name">
             </figure>
-            <ul class="border-3 border-start">
+            <ul class="border-3 border-start fs-4">
                 <li>{{currentUser.first_name}}</li>
                 <li>{{currentUser.last_name}}</li>
                 <li>
@@ -12,6 +12,9 @@
                 </li>
                 <li>
                     <p class="fw-bold d-inline">Email:</p> {{currentUser.email}}
+                </li>
+                <li class="mt-5">
+                    <button class="btn btn-warning" [routerLink]="['/home']">Volver al listado</button>
                 </li>
             </ul>
         </div>

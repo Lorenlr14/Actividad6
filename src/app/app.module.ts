@@ -6,17 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormComponent } from './components/form/form.component';
-import { UserComponent } from './components/user/user.component';
 import { C404Component } from './components/c404/c404.component';
 import { UserCardComponent } from './components/home/user-card/user-card.component';
-import { UserViewComponent } from './components/user/user-view/user-view.component';
+import { UserViewComponent } from './components/user-view/user-view.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FormComponent,
-    UserComponent,
     C404Component,
     UserCardComponent,
     UserViewComponent
@@ -24,6 +23,7 @@ import { UserViewComponent } from './components/user/user-view/user-view.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
